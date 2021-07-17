@@ -1,25 +1,96 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"dir": "ltr",
+	"lang": "en",
+	"name": "FLL CARGO CONNECT℠ Scorer",
+	"short_name": "FLL Scorer",
+	"scope": "/",
+	"display": "standalone",
+	"start_url": "./",
+	"background_color": "#000000",
+	"theme_color": "#1E5AA8",
+	"description": "Practice your FIRST® LEGO® League runs for the 2020-21 CARGO CONNECT℠ Season. With timers to time yourself and interactive forms to score yourself, this site is exactly what you need to excel.",
+	"orientation": "any",
+	"related_applications": [],
+	"prefer_related_applications": false,
+	"icons": [
+		{
+			"src": "/images/circle_icon/circle_icon_x48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/circle_icon/circle_icon_x72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/circle_icon/circle_icon_x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/circle_icon/circle_icon_x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/circle_icon/circle_icon_x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/circle_icon/circle_icon_x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/circle_icon/circle_icon_x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "/images/maskable_icon/maskable_icon_x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"url": "./",
+	"screenshots": []
 }
