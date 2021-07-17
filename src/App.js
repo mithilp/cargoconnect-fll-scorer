@@ -1,8 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./theme.js";
 
 function App() {
 	return (
-		<ChakraProvider>
+		<ChakraProvider theme={theme}>
 			added in chakra ui
 			{/* TODO: add in <ColorModeSwitcher /> when Chakra UI fixes flashing issue
 				Learn more:
