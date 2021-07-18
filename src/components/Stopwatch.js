@@ -47,18 +47,18 @@ const Timer = () => {
 
 	return (
 		<HStack
-			borderWidth="1px"
-			borderRadius="lg"
-			boxShadow="md"
 			direction="horizontal"
 			alignItems="center"
-			spacing={2}
+			spacing={{ base: 5, sm: 2 }}
 			minH={100}
-			w="min-content"
-			px={3}
-			py={1}
+			w={{ base: "100%", sm: "min-content" }}
 		>
-			<Text fontSize="3xl" textAlign="center" w={100} lineHeight="100px">
+			<Text
+				fontSize="3xl"
+				textAlign="center"
+				w={{ base: "100px", sm: "4ch" }}
+				lineHeight={{ base: "auto", sm: "100px" }}
+			>
 				{formatTime(time)}
 			</Text>
 			<Stack spacing={0}>

@@ -50,7 +50,13 @@ const Timer = () => {
 	};
 
 	return (
-		<HStack direction="horizontal" alignItems="center" spacing={2}>
+		<HStack
+			direction="horizontal"
+			alignItems="center"
+			spacing={{ base: 5, sm: 2 }}
+			minH={100}
+			w={{ base: "100%", sm: "min-content" }}
+		>
 			<CircularProgress
 				size={100}
 				color={time > 60 ? "green.500" : time > 15 ? "orange.400" : "red.300"}
