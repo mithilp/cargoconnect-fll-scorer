@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme.js";
 
 import Header from "./components/Header";
+import M00 from "./components/M00";
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 				Learn more:
 					https://chakra-ui.com/docs/features/color-mode#color-mode-flash-issue */}
 			<Header />
+			<M00 />
 		</ChakraProvider>
 	);
 }
