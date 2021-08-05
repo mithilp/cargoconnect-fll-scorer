@@ -5,11 +5,11 @@ const CardWrapper = ({ children }) => {
 		<VStack
 			borderWidth="1px"
 			borderRadius="lg"
-			boxShadow="lg"
+			boxShadow="md"
 			overflow="hidden"
-			p={2}
+			p={3}
 			align="flex-start"
-			w={{ base: "100%", sm: "25vw" }}
+			w={{ base: "94.5vw", md: "47.5vw", lg: "31.5vw" }}
 		>
 			{children}
 		</VStack>

@@ -50,7 +50,7 @@ const Timer = () => {
 			direction="horizontal"
 			alignItems="center"
 			spacing={{ base: 5, sm: 2 }}
-			minH={100}
+			minH={{ base: 0, sm: 100 }}
 			w={{ base: "100%", sm: "min-content" }}
 		>
 			<Text
