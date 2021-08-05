@@ -1,0 +1,13 @@
+{
+	"hosting": {
+		"target": "fll-scorer",
+		"public": "build",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"rewrites": [
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
+	}
+}
