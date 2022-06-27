@@ -1,6 +1,12 @@
 import { Text, Select } from "@chakra-ui/react";
 
-const SelectComponent = ({ question, value, onChange, options }) => {
+const SelectComponent = ({
+	question,
+	value,
+	onChange,
+	options,
+	placeholder,
+}) => {
 	return (
 		<>
 			<Text>{question}</Text>
@@ -9,7 +15,7 @@ const SelectComponent = ({ question, value, onChange, options }) => {
 				cursor="pointer"
 				value={value}
 				onChange={onChange}
-				placeholder="None"
+				placeholder={placeholder}
 			>
 				{options
 					? options.map(({ value, label }) => (

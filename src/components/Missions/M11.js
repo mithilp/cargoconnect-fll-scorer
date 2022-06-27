@@ -20,34 +20,23 @@ const M11 = () => {
 		<CardWrapper>
 			<MissionHeader
 				number="11"
-				name="Treadmill"
+				name="Home Delivery"
 				score={
-					missions.M11.q1 === "gray"
-						? 5
-						: missions.M11.q1 === "red"
-						? 10
-						: missions.M11.q1 === "orange"
-						? 15
-						: missions.M11.q1 === "yellow"
+					missions.M11.q1 === "completely"
 						? 20
-						: missions.M11.q1 === "green"
-						? 25
-						: missions.M11.q1 === "dark-green"
-						? 30
+						: missions.M11.q2 === "partly"
+						? 10
 						: 0
 				}
 			/>
 			<Select
-				question="Spins the rollers to a specific color"
+				question="Has the package been delivered to its destination so that it is on the doorstep?"
 				value={missions.M11.q1}
 				onChange={(e) => setQ1(e.target.value)}
 				options={[
-					{ value: "gray", label: "Gray" },
-					{ value: "red", label: "Red" },
-					{ value: "orange", label: "Orange" },
-					{ value: "yellow", label: "Yellow" },
-					{ value: "green", label: "Green" },
-					{ value: "dark-green", label: "Dark Green" },
+					{ value: "completely", label: "Completely Delivered" },
+					{ value: "partly", label: "Partly Delivered" },
+					{ value: "no", label: "Not Delivered" },
 				]}
 			/>
 		</CardWrapper>

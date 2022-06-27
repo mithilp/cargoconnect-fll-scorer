@@ -9,7 +9,7 @@ const InfoFooter = () => {
 					Quantum Connects
 				</Link>
 			</Box>
-			<Box>FLL Scorer v2 - Released August 4, 2021</Box>
+			<Box>FLL Scorer v2.0 - October 23, 2021</Box>
 			<Wrap spacing={3}>
 				<Link
 					href="https://github.com/Quantum-Connects/fll-scorer"
@@ -21,7 +21,7 @@ const InfoFooter = () => {
 					href="https://github.com/Quantum-Connects/fll-scorer/issues"
 					target="_blank"
 				>
-					Report Bugs
+					Report a Bug
 				</Link>
 			</Wrap>
 		</Wrap>

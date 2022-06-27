@@ -21,60 +21,26 @@ const M03 = () => {
 		},
 		[missions, setMissions]
 	);
-	const setQ3 = useCallback(
-		(val) => {
-			setMissions({ ...missions, M03: { ...missions.M03, q3: val } });
-		},
-		[missions, setMissions]
-	);
-	const setQ4 = useCallback(
-		(val) => {
-			setMissions({ ...missions, M03: { ...missions.M03, q4: val } });
-		},
-		[missions, setMissions]
-	);
 
 	return (
 		<CardWrapper>
 			<MissionHeader
 				number="03"
-				name="Slide"
+				name="Unload Cargo Plane"
 				score={
-					(missions.M03.q1 === "yes" ? 5 : 0) +
-					(missions.M03.q2 === "yes" ? 15 : 0) +
-					(missions.M03.q3 === "yes" ? 10 : 0) +
-					(missions.M03.q4 === "yes" ? 10 : 0)
+					(missions.M03.q1 === "yes" ? 20 : 0) +
+					(missions.M03.q2 === "yes" ? 10 : 0)
 				}
 			/>
 			<YesNo
-				question="First person off the slide"
+				question="Has the cargo plane been prepared for unloading so that the cargo door rests completely down, touching its black frame?"
 				value={missions.M03.q1}
-				setValue={(val) => {
-					setQ1(val);
-					if (val !== "yes") {
-						setQ2("no");
-						setQ3("no");
-						setQ4("no");
-					}
-				}}
+				setValue={setQ1}
 			/>
 			<YesNo
-				isDisabled={missions.M03.q1 !== "yes"}
-				question="Second person off the slide"
+				question="Has the cargo plane been unloaded so that the container is completely separate from the plane?"
 				value={missions.M03.q2}
 				setValue={setQ2}
-			/>
-			<YesNo
-				isDisabled={missions.M03.q1 !== "yes"}
-				question="If a person is returned to home"
-				value={missions.M03.q3}
-				setValue={setQ3}
-			/>
-			<YesNo
-				isDisabled={missions.M03.q1 !== "yes"}
-				question="If a person is on the heavy tire"
-				value={missions.M03.q4}
-				setValue={setQ4}
 			/>
 		</CardWrapper>
 	);

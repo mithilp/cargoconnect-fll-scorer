@@ -24,7 +24,7 @@ const M01 = () => {
 				score={missions.M01.q1 === "yes" ? 20 : 0}
 			/>
 			<YesNo
-				question="Is any part of the model touching either the RePLAY logo or the gray area around the bench?"
+				question="Is any part of the model touching the CARGO CONNECT circle?"
 				value={missions.M01.q1}
 				setValue={setQ1}
 			/>

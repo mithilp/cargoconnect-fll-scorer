@@ -20,25 +20,26 @@ const M02 = () => {
 		<CardWrapper>
 			<MissionHeader
 				number="02"
-				name="Innovation Project"
+				name="Unused Capacity"
 				score={
-					missions.M02.q1 === "magenta"
-						? 10
-						: missions.M02.q1 === "yellow"
-						? 15
-						: missions.M02.q1 === "blue"
+					missions.M02.q1 === "completely"
+						? 30
+						: missions.M02.q1 === "partly"
 						? 20
+						: missions.M02.q1 === "no"
+						? 0
 						: 0
 				}
 			/>
 			<Select
-				question="The bottom of the pointer is on"
+				question="Is the hinged container completely closed and partly full of contents (1-5 content pieces) or completely full of contents (All 6 content pieces)?"
 				value={missions.M02.q1}
 				onChange={(e) => setQ1(e.target.value)}
+				placeholder="Select one"
 				options={[
-					{ value: "magenta", label: "Magenta" },
-					{ value: "yellow", label: "Yellow" },
-					{ value: "blue", label: "Blue" },
+					{ value: "completely", label: "Completely" },
+					{ value: "partly", label: "Partly" },
+					{ value: "no", label: "No" },
 				]}
 			/>
 		</CardWrapper>

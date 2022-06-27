@@ -5,7 +5,6 @@ import CardWrapper from "../MissionTemplate/CardWrapper";
 import MissionHeader from "../MissionTemplate/MissionHeader";
 
 import YesNo from "../MissionTemplate/YesNo";
-import Slider from "../MissionTemplate/Slider";
 
 const M04 = () => {
 	const { missions, setMissions } = useContext(PointsContext);
@@ -22,45 +21,26 @@ const M04 = () => {
 		},
 		[missions, setMissions]
 	);
-	const setQ3 = useCallback(
-		(val) => {
-			setMissions({ ...missions, M04: { ...missions.M04, q3: val } });
-		},
-		[missions, setMissions]
-	);
 
 	return (
 		<CardWrapper>
 			<MissionHeader
 				number="04"
-				name="Bench"
+				name="Transportation Journey"
 				score={
-					(missions.M04.q1 === "yes" ? 10 : 0) +
-					(missions.M04.q2 === "yes" ? 15 : 0) +
-					missions.M04.q3 * 10
+					(missions.M04.q1 === "yes" ? 30 : 0) +
+					(missions.M04.q2 === "yes" ? 10 : 0)
 				}
 			/>
 			<YesNo
-				question="Knocks down the bench"
+				question="Has the truck reached its destination, completely past its blue end line, on the mat?"
 				value={missions.M04.q1}
-				setValue={(val) => {
-					setQ1(val);
-					if (val !== "yes") {
-						setQ3(0);
-					}
-				}}
+				setValue={setQ1}
 			/>
 			<YesNo
-				question="Takes off back rest"
+				question="Has the airplane reached its destination, completely past its blue end line, on the mat?"
 				value={missions.M04.q2}
 				setValue={setQ2}
-			/>
-			<Slider
-				isDisabled={missions.M04.q1 !== "yes"}
-				question="Cubes in hop scotch spaces"
-				value={missions.M04.q3}
-				setValue={setQ3}
-				max={4}
 			/>
 		</CardWrapper>
 	);

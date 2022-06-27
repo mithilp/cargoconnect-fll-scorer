@@ -5,14 +5,17 @@ import CardWrapper from "../MissionTemplate/CardWrapper";
 import MissionHeader from "../MissionTemplate/MissionHeader";
 
 import YesNo from "../MissionTemplate/YesNo";
-import Slider from "../MissionTemplate/Slider";
 
 const M08 = () => {
 	const { missions, setMissions } = useContext(PointsContext);
 
 	const setQ1 = useCallback(
 		(val) => {
-			setMissions({ ...missions, M08: { ...missions.M08, q1: val } });
+			if (val === "no") {
+				setMissions({ ...missions, M08: { q1: val, q3: "no" } });
+			} else {
+				setMissions({ ...missions, M08: { ...missions.M08, q1: val } });
+			}
 		},
 		[missions, setMissions]
 	);
@@ -33,27 +36,26 @@ const M08 = () => {
 		<CardWrapper>
 			<MissionHeader
 				number="08"
-				name="Boccia"
+				name="Air Drop"
 				score={
-					(missions.M08.q1 === "yes" ? 25 : 0) +
-					missions.M08.q2 * 5 +
+					(missions.M08.q1 === "yes" ? 20 : 0) +
+					(missions.M08.q2 === "yes" ? 10 : 0) +
 					(missions.M08.q3 === "yes" ? 10 : 0)
 				}
 			/>
 			<YesNo
-				question="Dancing on the dance floor at the end of the match"
+				question="Is the food package separated from your helicopter?"
 				value={missions.M08.q1}
 				setValue={setQ1}
 			/>
-			<Slider
-				question="Any other color cubes in your target"
+			<YesNo
+				question="Is the food package separated from the other field’s helicopter and is completely in your field’s CARGO CONNECT circle?"
 				value={missions.M08.q2}
 				setValue={setQ2}
-				max={18}
 			/>
 			<YesNo
-				isDisabled={missions.M08.q2 === 0}
-				question="At least one yellow cube completely in the target"
+				isDisabled={missions.M08.q1 !== "yes"}
+				question="Have both teams separated their food packages from their field’s helicopters?"
 				value={missions.M08.q3}
 				setValue={setQ3}
 			/>

@@ -20,11 +20,11 @@ const M10 = () => {
 		<CardWrapper>
 			<MissionHeader
 				number="10"
-				name="Cell Phone"
-				score={missions.M10.q1 === "yes" ? 15 : 0}
+				name="Sorting Center"
+				score={missions.M10.q1 === "yes" ? 20 : 0}
 			/>
 			<YesNo
-				question="Flips the cell phone white side up."
+				question="Have the containers been sorted so that the light orange container is the only container remaining completely in the blue sorting area box?"
 				value={missions.M10.q1}
 				setValue={setQ1}
 			/>

@@ -16,6 +16,8 @@ import M12 from "./Missions/M12";
 import M13 from "./Missions/M13";
 import M14 from "./Missions/M14";
 import M15 from "./Missions/M15";
+import M16 from "./Missions/M16";
+import M17 from "./Missions/M17";
 
 const MissionsContainer = () => {
 	return (
@@ -67,6 +69,12 @@ const MissionsContainer = () => {
 			</WrapItem>
 			<WrapItem>
 				<M15 />
+			</WrapItem>
+			<WrapItem>
+				<M16 />
+			</WrapItem>
+			<WrapItem>
+				<M17 />
 			</WrapItem>
 		</Wrap>
 	);

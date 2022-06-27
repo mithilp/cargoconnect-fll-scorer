@@ -14,7 +14,7 @@ const PointsFooter = () => {
 			bottom={0}
 			left={0}
 			w="100vw"
-			h="60px"
+			h="70px"
 			bg="green.200"
 			zIndex={1}
 		>
@@ -23,71 +23,63 @@ const PointsFooter = () => {
 					Points:{" "}
 					{(missions.M00.q1 === "yes" ? 25 : 0) +
 						(missions.M01.q1 === "yes" ? 20 : 0) +
-						(missions.M02.q1 === "magenta"
-							? 10
-							: missions.M02.q1 === "yellow"
-							? 15
-							: missions.M02.q1 === "blue"
+						(missions.M02.q1 === "completely"
+							? 30
+							: missions.M02.q1 === "partly"
 							? 20
+							: missions.M02.q1 === "no"
+							? 0
 							: 0) +
 						((missions.M03.q1 === "yes" ? 5 : 0) +
 							(missions.M03.q2 === "yes" ? 15 : 0) +
 							(missions.M03.q3 === "yes" ? 10 : 0) +
 							(missions.M03.q4 === "yes" ? 10 : 0)) +
-						((missions.M04.q1 === "yes" ? 10 : 0) +
-							(missions.M04.q2 === "yes" ? 15 : 0) +
-							missions.M04.q3 * 10) +
-						((missions.M05.q1 === "yes" ? 15 : 0) +
-							(missions.M05.q2 === "middle"
-								? 15
-								: missions.M05.q2 === "top"
-								? 25
-								: 0)) +
-						(missions.M06.q1 === "yes" ? 15 : 0) +
-						(missions.M06.q2 === "yes" ? 30 : 0) +
-						(missions.M07.q1 === "yes" ? 10 : 0) +
-						((missions.M08.q1 === "yes" ? 25 : 0) +
-							missions.M08.q2 * 5 +
+						((missions.M04.q1 === "yes" ? 30 : 0) +
+							(missions.M04.q2 === "yes" ? 10 : 0)) +
+						(missions.M05.q1 === "yes" ? 20 : 0) +
+						((missions.M06.q1 === "yes" ? 20 : 0) +
+							(missions.M06.q2 === "yes" ? 30 : 0)) +
+						((missions.M07.q1 === "yes" ? 20 : 0) +
+							(missions.M07.q2 === "yes" ? 10 : 0)) +
+						((missions.M08.q1 === "yes" ? 20 : 0) +
+							(missions.M08.q2 === "yes" ? 10 : 0) +
 							(missions.M08.q3 === "yes" ? 10 : 0)) +
-						((missions.M09.q1 === "yes" ? 10 : 0) +
-							(missions.M09.q2 === "yes" ? 15 : 0) +
-							missions.M09.q3 * 5) +
-						(missions.M10.q1 === "yes" ? 15 : 0) +
-						(missions.M11.q1 === "gray"
-							? 5
-							: missions.M11.q1 === "red"
-							? 10
-							: missions.M11.q1 === "orange"
-							? 15
-							: missions.M11.q1 === "yellow"
+						((missions.M09.q1 === "yes" ? 20 : 0) +
+							(missions.M09.q2 === "yes" ? 20 : 0)) +
+						(missions.M10.q1 === "yes" ? 20 : 0) +
+						(missions.M11.q1 === "completely"
 							? 20
-							: missions.M11.q1 === "green"
+							: missions.M11.q2 === "partly"
+							? 10
+							: 0) +
+						((missions.M12.q1 === "holder-mat"
+							? 20
+							: missions.M12.q1 === "only-holder"
+							? 30
+							: 0) +
+							(missions.M12.q2 === "completely"
+								? 10
+								: missions.M12.q2 === "partly"
+								? 5
+								: 0)) +
+						((missions.M13.q1 === "yes" ? 10 : 0) +
+							(missions.M13.q2 === "yes" ? 20 : 0)) +
+						missions.M14.q1 * 10 +
+						(missions.M15.q1 * 10 +
+							missions.M15.q2 * 20 +
+							missions.M15.q3 * 30) +
+						(missions.M17.q1 === 1
+							? 10
+							: missions.M17.q1 === 2
+							? 15
+							: missions.M17.q1 === 3
 							? 25
-							: missions.M11.q1 === "dark-green"
-							? 30
-							: 0) +
-						((missions.M12.q1 === "yes" ? 15 : 0) +
-							(missions.M12.q2 === "yes" ? 15 : 0)) +
-						(missions.M13.q1 === "blue"
-							? 10
-							: missions.M13.q1 === "magenta"
-							? 15
-							: missions.M13.q1 === "yellow"
-							? 20
-							: 0) +
-						(missions.M14.q1 * 5 + missions.M14.q2 * 10) +
-						(missions.M15.q1 === 1
-							? 5
-							: missions.M15.q1 === 2
-							? 10
-							: missions.M15.q1 === 3
-							? 20
-							: missions.M15.q1 === 4
-							? 30
-							: missions.M15.q1 === 5
-							? 45
-							: missions.M15.q1 === 6
-							? 60
+							: missions.M17.q1 === 4
+							? 35
+							: missions.M17.q1 === 5
+							? 50
+							: missions.M17.q1 === 6
+							? 50
 							: 0)}
 				</Text>
 				<Button onClick={() => setMissions(defaultPoints)}>Reset All</Button>

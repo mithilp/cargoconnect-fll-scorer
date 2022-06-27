@@ -4,7 +4,7 @@ import { PointsContext } from "../../Points.js";
 import CardWrapper from "../MissionTemplate/CardWrapper";
 import MissionHeader from "../MissionTemplate/MissionHeader";
 
-import Select from "../MissionTemplate/Select";
+import YesNo from "../MissionTemplate/YesNo";
 
 const M13 = () => {
 	const { missions, setMissions } = useContext(PointsContext);
@@ -16,30 +16,32 @@ const M13 = () => {
 		[missions, setMissions]
 	);
 
+	const setQ2 = useCallback(
+		(val) => {
+			setMissions({ ...missions, M13: { ...missions.M13, q2: val } });
+		},
+		[missions, setMissions]
+	);
+
 	return (
 		<CardWrapper>
 			<MissionHeader
 				number="13"
-				name="Weight Machine"
+				name="Platooning Trucks"
 				score={
-					missions.M13.q1 === "blue"
-						? 10
-						: missions.M13.q1 === "magenta"
-						? 15
-						: missions.M13.q1 === "yellow"
-						? 20
-						: 0
+					(missions.M13.q1 === "yes" ? 10 : 0) +
+					(missions.M13.q2 === "yes" ? 20 : 0)
 				}
 			/>
-			<Select
-				question="Set the color before the match and pushes the lever down"
+			<YesNo
+				question="Are both trucks latched together completely outside of home?"
 				value={missions.M13.q1}
-				onChange={(e) => setQ1(e.target.value)}
-				options={[
-					{ value: "blue", label: "Blue" },
-					{ value: "magenta", label: "Magenta" },
-					{ value: "yellow", label: "Yellow" },
-				]}
+				setValue={setQ1}
+			/>
+			<YesNo
+				question="Is a truck latched to the bridge?"
+				value={missions.M13.q2}
+				setValue={setQ2}
 			/>
 		</CardWrapper>
 	);
